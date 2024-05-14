@@ -6,5 +6,11 @@
 return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.rust" },
+  { import = "astrocommunity.pack.go" },
+  { import = "astrocommunity.pack.docker" },
+  { import = "astrocommunity.pack.typescript-deno" },
+  { import = "astrocommunity.utility.noice-nvim" },
+  { import = "astrocommunity.completion.copilot-lua-cmp" },
   -- import/override with your plugins folder
 }

@@ -44,6 +44,30 @@ return {
     ---@diagnostic disable: missing-fields
     config = {
       -- clangd = { capabilities = { offsetEncoding = "utf-8" } },
+      gopls = {
+        settings = {
+          gopls = {
+            semanticTokens = true,
+            analyses = {
+              unusedparams = true,
+            },
+            staticcheck = true,
+            hints = {
+              assignVariableTypes = true,
+              compositeLiteralFields = true,
+              compositeLiteralTypes = true,
+              constantValues = true,
+              functionTypeParameters = true,
+              parameterNames = true,
+              rangeVariableTypes = true,
+            },
+            gofumpt = true,
+          },
+        },
+      },
+      denols = {
+        root_dir = require("lspconfig.util").root_pattern("deno.json", "deno.jsonc"),
+      },
     },
     -- customize how language servers are attached
     handlers = {
